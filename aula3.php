@@ -1,0 +1,4 @@
+<?php
+define('MAXIMO_CLIENTES',150);
+echo MAXIMO_CLIENTES;
+?>
