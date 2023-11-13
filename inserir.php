@@ -4,7 +4,7 @@ $codigo = $_POST["codigo"];
 $descricao = $_POST["descricao"];
 $preco = $_POST["preco"];
 $unidade = $_POST["unidade"];
-$resultado = mysqli_query($conexao, "INSERT INTO produto VALUES ($codigo,'$descricao',$preco,'$unidade')");
+$resultado = mysqli_query($conexao, "INSERT INTO produto VALUES ($codigo,'$descricao',$preco,'$unidade');");
 $linhas = mysqli_affected_rows($conexao);
 mysqli_close($conexao);
 echo "<p>";
