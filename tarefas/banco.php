@@ -1,7 +1,7 @@
 <?php
     $bdServidor = 'localhost';
     $bdUsuario = 'root';
-    $bdSenha = 'tioROY@2023';
+    $bdSenha = '';
     $bdBanco = 'tarefas';
 
     $conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
