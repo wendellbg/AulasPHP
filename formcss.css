@@ -70,3 +70,37 @@ input[type="submit"], input[type="reset"] {
 .btn-limpar:hover {
     background-color: #c82333;
 }
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    border-left: 5px solid #2563eb;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.resultado span {
+    display: block;
+    font-size: 14px;
+    color: #475569;
+}
+
+.resultado strong {
+    display: block;
+    font-size: 24px;
+    color: #1e293b;
+    margin-top: 5px;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
