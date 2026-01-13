@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentagem</title>
+    <link rel="stylesheet" href="formcss.css">
+</head>
+<body>
+    <form method="post" action="Calculadora%.php" class="calculadora-form">
+        <div class="campo-container">
+            <label for="percentual">Percentual (%):</label>
+            <input type="text" id="percentual" name="percentual" placeholder="Ex: 10" required>
+        </div>
+
+        <div class="campo-container">
+            <label for="valor">Valor (R$):</label>
+            <input type="text" id="valor" name="valor" placeholder="Ex: 500" required>
+        </div>
+
+        <div class="botoes-container">
+            <input type="submit" name="enviar" value="Calcular" class="btn-enviar">
+            <input type="reset" name="limpar" value="Limpar" class="btn-limpar">
+        </div>
+    </form>
+</body>
+</html>
