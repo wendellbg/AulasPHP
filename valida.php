@@ -1,46 +1,42 @@
-<?php	
-	$nome = $_POST["nome"];
-	$email = $_POST["email"];
-	$site = $_POST["site"];
-	$comentarios = $_POST["comentarios"];	
-	$genero = $_POST["genero"];	
-	
-	function testa_campo($dados){
-		$dados = trim($dados);
-		$dados = stripslashes($dados);
-		$dados = htmlspecialchars($dados);
-		return $dados;
+<?php
+$nome = $email = $genero = $comentario = $site = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	//Verifica se o campo nome não está vazio
+	if (empty($_POST["nome"])) {
+		echo "Erro: O campo nome é obrigatório!<br>";
 	}
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		if (empty($nome)) {
-			echo "O campo nome não foi preenchido!<br>";
-		} else {	
-			$nome = testa_campo($nome);
-			echo "Nome: $nome.<br>";
-		}
-		if (empty($email)) {
-			echo "O campo e-mail não foi preenchido!<br>";
-		} else {	
-			$email = testa_campo($email);
-			echo "Endereço de e-mail: $email.<br>";
-		}
-		if (empty($site)) {
-			echo "O campo site não foi preenchido!<br>";
-		} else {	
-			$site = testa_campo($site);
-			echo "Site: $site.<br>";
-		}
-		if (empty($comentarios)) {			
-			echo "O campo comentários não foi preenchido!<br>";			
-		} else {	
-			$comentarios = testa_campo($comentarios);
-			echo "Comentário: $comentarios.<br>";
-		}
-		if (empty($genero)) {
-			echo "O campo gênero não foi preenchido!<br>";
-		} else {	
-			$genero = testa_campo($genero);
-			echo "Genero: $genero.<br>";
-		}		
+	//Verifica se o campo nome não tem menos de 20 caracteres
+	if (strlen($_POST["nome"]) < 20) {
+		echo "Erro: O campo nome deve ter pelo menos 20 caracteres";
 	}	
+	if (empty($_POST["email"])) {
+		echo "Erro: O campo email é obrigatório!<br>";
+	}	
+	if (empty($_POST["site"])) {
+		echo "Erro: O campo site é obrigatório!<br>";
+	}	
+	$nome = testa_campo($_POST["nome"]);
+	$email = testa_campo($_POST["email"]);
+	$genero = testa_campo($_POST["genero"]);
+	$comentario = testa_campo($_POST["comentario"]);
+	$site = testa_campo($_POST["site"]);
+}
+//Função para validar os campos do formulário
+function testa_campo($dados) {			
+		$dados = trim($dados); //Retira caracteres especiais do inicio e fim da palavra
+		$dados = stripslashes($dados); //Remove barras invertidas da palavra
+		$dados = htmlspecialchars($dados); //Remove os caracteres < e > da palavra
+		
+		return $dados;
+}
+echo "<h2>Seus dados</h2>";
+echo $nome;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $genero;
+echo "<br>";
+echo $comentario;
+echo "<br>";
+echo $site;	
 ?>
