@@ -6,12 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "Erro: O campo nome é obrigatório!<br>";
 	}
 	//Verifica se o campo nome não tem menos de 20 caracteres
-	if (strlen($_POST["nome"]) < 20) {
-		echo "Erro: O campo nome deve ter pelo menos 20 caracteres";
-	}	
+	if (strlen($_POST["nome"]) < 50) {
+		echo "Erro: O campo nome deve ter pelo menos 20 caracteres<br>";
+	}
+    //Verifica se o campo email não está vazio	
 	if (empty($_POST["email"])) {
 		echo "Erro: O campo email é obrigatório!<br>";
 	}	
+	//Verifica se o campo site não está vazio
 	if (empty($_POST["site"])) {
 		echo "Erro: O campo site é obrigatório!<br>";
 	}	
