@@ -1,4 +1,5 @@
 <?php
+//Este programa exclui um registro no banco de dados e faz parte da aula de CRUD
 $id=$_GET['id'];
 include "conecta_mysql.inc";
 $resultado=mysqli_query($conexao,"DELETE FROM produto WHERE codigo=$id;");
