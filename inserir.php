@@ -1,4 +1,5 @@
 <?php
+//Este programa faz a inserção de registros no banco de dados (INSERT) e faz parte da aula de CRUD
 include "conecta_mysql.inc";
 $codigo = $_POST["codigo"];
 $descricao = $_POST["descricao"];

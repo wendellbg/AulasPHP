@@ -1,4 +1,5 @@
 <?php
+//Este programa lista os registros do banco de dados e faz parte da aula de CRUD
 include "conecta_mysql.inc";
 $resultado = mysqli_query($conexao,"SELECT * FROM  produto;");
 while ($linhas = mysqli_fetch_row($resultado)) {
