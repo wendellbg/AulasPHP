@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+  </head>
+  <body>
+    <form method="POST" action="salva_nome.php">
+  <div class="mb-3">
+    <label for="usuario" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="usuario" aria-describedby="usuario" name="usuario">
+    <div id="usuario" class="form-text">Escreva o seu nome de usuário.</div>
+  </div>
+  <div class="mb-3">
+    <label for="senha" class="form-label">Senha</label>
+    <input type="password" name="senha" class="form-control" id="senha">
+  </div>
+  <div class="mb-3 form-field">
+    <input type="checkbox" id="exampleCheck1" class="check">
+    <label for="exampleCheck1">Lembre-me</label>
+  </div>
+  <button type="submit" class="btn-solid theme-primary">Enviar</button>
+</form>
+  </body>
+</html>
